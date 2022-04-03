@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--gzn_paging_v2_parent_view-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                style="@style/MyAppbarLayout"
+                android:background="@color/white">
+
+                <com.google.android.material.appbar.MaterialToolbar style="@style/MyMaterialToolbar">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/btn_back"
+                            style="@style/MyCostumToolbarImage"
+                            android:src="@drawable/mygzn_keyboard_arrow_left"
+                            android:tag="CostumToolbarImage" />
+
+                        <TextView
+                            android:id="@+id/tv_toolbar"
+                            style="@style/MyCostumToolbarTitle"
+                            android:text="Product" />
+
+                        <ImageButton
+                            android:id="@+id/btn_popup"
+                            style="@style/MyOptionMenu"
+                            android:src="@drawable/mygzn_more_vert" />
+                    </LinearLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <View style="@style/MyDivider.Toolbar" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                style="@style/swipeRefreshLayoutV1">
+
+                <LinearLayout style="@style/MyParentType.List">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_filter_text"
+                            style="@style/MyLinearLayout.White"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/space_half"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_filter_text"
+                                style="@style/MyTextContent"
+                                android:text="2021-12-27 sd 2021-12-28"
+                                android:textColor="@color/colorPrimary" />
+
+                            <ImageView
+                                android:id="@+id/img_clear_filter"
+                                android:layout_marginStart="@dimen/def_margin_half"
+                                android:src="@drawable/ic_baseline_cancel_24"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="@dimen/def_margin_half" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            style="@style/LLEmptyStateRV"
+                            android:visibility="gone"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_product"
+                            tools:visibility="visible" />
+
+                        <LinearLayout
+                            android:id="@+id/imgEmpty"
+                            style="@style/LLEmptyState"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                style="@style/LLEmptyStateImage"
+                                android:src="@drawable/img_no_data_v3" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
