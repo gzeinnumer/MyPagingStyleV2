@@ -2,6 +2,7 @@ package com.gzeinnumer.mypagingstylev2.model;
 
 import com.gzeinnumer.mypagingstylev2.base.BaseConstant;
 
+//File and Code Template -> PagingParams
 public class PagingParams {
     private int totalPage;
     private int currentPage = 1;

@@ -22,6 +22,7 @@ import com.gzeinnumer.mypagingstylev2.model.ProductResponse;
 import java.util.ArrayList;
 import java.util.List;
 
+//File and Code Template -> Paging2_PagerAdapter
 public class ProductPager extends PagingAdapter {
     private final List<ProductResponse> list = new ArrayList<>();
     private Context context;

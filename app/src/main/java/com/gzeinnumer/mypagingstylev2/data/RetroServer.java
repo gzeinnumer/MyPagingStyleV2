@@ -6,8 +6,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
-//    public static String base_url = "https://demo-laravel.gzeinnumer.com/api/";
-    public static String base_url = "http://192.168.1.10:8000/api/";
+    public static String base_url = "https://demo-laravel.gzeinnumer.com/api/";
+//    public static String base_url = "http://192.168.1.10:8000/api/";
 
     private static Retrofit setInit() {
         TokenInterceptor tokenInterceptor = new TokenInterceptor();

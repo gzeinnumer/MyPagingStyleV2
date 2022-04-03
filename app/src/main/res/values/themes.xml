@@ -24,6 +24,7 @@
         <item name="colorOnPrimary">@color/white</item>
     </style>
 
+    <!--gzn_paging_v2_style-->
     <style name="CustomDialogStyleFilter" parent="Theme.MaterialComponents.Light.Dialog">
         <item name="android:windowMinWidthMajor">80%</item>
         <item name="android:windowMinWidthMinor">80%</item>
@@ -34,7 +35,6 @@
         <item name="colorOnPrimary">@color/white</item>
     </style>
 
-<!--gzn_paging_v2_style-->
     <style name="swipeRefreshLayoutV1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
