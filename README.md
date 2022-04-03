@@ -1,6 +1,10 @@
 # MyPagingStyleV2
 
 ```
+https://demo-laravel.gzeinnumer.com/
+```
+
+```
 //    buildFeatures{
 //        viewBinding = true
 //    }
@@ -51,9 +55,6 @@ Live Template -> gzn_paging_v2_parent_view_tablayout
 ```
 File and Code Template -> Paging_V2_No_TabLayout
 Live Template -> gzn_paging_v2_parent_view
-```
-
-```
 ```
 
 ---
